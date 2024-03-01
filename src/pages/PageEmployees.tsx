@@ -1,4 +1,4 @@
-import db from '../data/db.json';
+import db from "../data/db.json";
 
 const employees = db.employees;
 
@@ -11,9 +11,9 @@ export const PageEmployees = () => {
 				<>
 					<p>There are {employees.length} employees.</p>
 
-					<div className="relative overflow-x-auto mt-4 rounded w-full">
-						<table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-							<thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+					<div className="relative mt-4 w-full overflow-x-auto rounded">
+						<table className="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400">
+							<thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
 								<tr>
 									<th scope="col" className="px-6 py-3">
 										ID
@@ -41,7 +41,7 @@ export const PageEmployees = () => {
 							<tbody>
 								{employees.map((employee) => {
 									return (
-										<tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+										<tr className="border-b bg-white dark:border-gray-700 dark:bg-gray-800">
 											<td className="px-6 py-4">
 												{employee.id}
 											</td>
